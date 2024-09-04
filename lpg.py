@@ -20,7 +20,7 @@ def extract_username(authorization):
     except (json.JSONDecodeError, KeyError):
         return 'unknown'
 
-# Fungsi untuk membaca authorization dari file query.txt
+# Fungsi untuk membaca authorization dari file data.txt
 def load_authorizations_with_usernames(file_path):
     with open(file_path, 'r') as file:
         authorizations = file.readlines()
@@ -96,7 +96,7 @@ def claim_task(headers, task_type, title):
 
 # Fungsi utama untuk menjalankan seluruh proses
 def main():
-    auth_data = load_authorizations_with_usernames('query.txt')
+    auth_data = load_authorizations_with_usernames('data.txt')
 
     while True:
         for account_number, data in enumerate(auth_data, start=1):
