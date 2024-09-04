@@ -57,7 +57,8 @@ def claim_tasks(authorization, account_number, username):
                 title = task.get("title")
                 reward = task.get("reward", 0)
                 is_claimed = task.get("is_claimed")
-                count = task.get("count", 0)                                                                                                                            max_count = task.get("max_count")
+                count = task.get("count", 0)   
+                max_count = task.get("max_count")
 
                 if max_count is None and not is_claimed:
                     claim_task(headers, task_type, title)
