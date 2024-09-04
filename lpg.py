@@ -1,6 +1,7 @@
 import requests
 import urllib.parse
-from fake_useragent import UserAgent                                                                                                                    import time
+from fake_useragent import UserAgent
+import time
 import json
 
 # Fungsi untuk memecah data dan mengambil username dari authorization token atau user data
