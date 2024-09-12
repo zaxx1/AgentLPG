@@ -40,7 +40,7 @@ def claim_tasks(authorization, account_number, username):
         'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
     }
 
-    url_get_tasks = 'https://api.agent301.org/getMe'
+    url_get_tasks = 'https://api.agent301.org/getTasks'
     response = requests.post(url_get_tasks, headers=headers)
 
     if response.status_code == 200:
